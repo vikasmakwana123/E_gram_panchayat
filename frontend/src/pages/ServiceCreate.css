@@ -1,0 +1,104 @@
+.service-create {
+  min-height: 100vh;
+  background: #f5f7fa;
+  padding-bottom: 2rem;
+}
+
+.service-create .page-header {
+  background: linear-gradient(135deg, #0f4c3a 0%, #1a6b4f 100%);
+  color: #fff;
+  padding: 1rem 2rem;
+  margin-bottom: 2rem;
+}
+
+.service-create .btn-back {
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.5);
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+}
+
+.service-create .btn-back:hover {
+  background: rgba(255,255,255,0.15);
+}
+
+.service-create .page-header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.service-form {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.service-form label {
+  display: block;
+  margin-bottom: 1.25rem;
+}
+
+.service-form label span {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.service-form input[type="text"],
+.service-form textarea {
+  width: 100%;
+  padding: 0.65rem 0.85rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.service-form textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.service-form .form-error {
+  color: #c00;
+  margin: 1rem 0;
+}
+
+.service-form .form-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.service-form .form-actions button {
+  padding: 0.65rem 1.25rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.service-form .form-actions button[type="button"] {
+  background: #e0e0e0;
+  border: none;
+  color: #333;
+}
+
+.service-form .form-actions button[type="submit"] {
+  background: #1a6b4f;
+  color: #fff;
+  border: none;
+}
+
+.service-form .form-actions button[type="submit"]:hover:not(:disabled) {
+  background: #0f4c3a;
+}
+
+.service-form .form-actions button[type="submit"]:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}

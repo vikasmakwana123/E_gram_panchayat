@@ -1,0 +1,30 @@
+{
+  "name": "e-gram-panchayat-backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js"
+  },
+  "keywords": [
+    "e-gram-panchayat",
+    "gram-panchayat",
+    "government-services"
+  ],
+  "author": "",
+  "license": "ISC",
+  "description": "Backend for E-Gram Panchayat - Digital Citizen Services",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.95.3",
+    "bcrypt": "^6.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "firebase": "^10.7.1",
+    "firebase-admin": "^12.0.0",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "uuid": "^9.0.1"
+  }
+}

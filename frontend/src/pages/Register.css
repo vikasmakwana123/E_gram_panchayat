@@ -1,0 +1,101 @@
+.register-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #f5f7f6;
+}
+
+.register-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+.register-box {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 400px;
+}
+
+.register-box h1 {
+  margin: 0 0 0.25rem 0;
+  font-size: 1.75rem;
+  color: #0f4c3a;
+}
+
+.register-box .subtitle {
+  margin: 0 0 1.5rem 0;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.register-box label {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.register-box label span {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.register-box input {
+  width: 100%;
+  padding: 0.65rem 0.85rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.register-box input:focus {
+  outline: none;
+  border-color: #1a6b4f;
+}
+
+.register-box .error {
+  color: #c00;
+  font-size: 0.9rem;
+  margin: 0 0 1rem 0;
+}
+
+.register-box button {
+  width: 100%;
+  padding: 0.75rem;
+  background: #1a6b4f;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+.register-box button:hover:not(:disabled) {
+  background: #0f4c3a;
+}
+
+.register-box button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.register-box .login-link {
+  margin-top: 1.25rem;
+  font-size: 0.9rem;
+  color: #666;
+  text-align: center;
+}
+
+.register-box .login-link a {
+  color: #1a6b4f;
+}

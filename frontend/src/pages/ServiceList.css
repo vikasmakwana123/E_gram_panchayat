@@ -1,0 +1,179 @@
+.service-list {
+  min-height: 100vh;
+  background: #f5f7fa;
+  padding-bottom: 2rem;
+}
+
+.service-list .page-header {
+  background: linear-gradient(135deg, #0f4c3a 0%, #1a6b4f 100%);
+  color: #fff;
+  padding: 1rem 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.service-list .btn-back {
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.service-list .btn-back:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.service-list .page-header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  flex: 1;
+}
+
+.service-list .btn-create {
+  background: rgba(255, 255, 255, 0.25);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.service-list .btn-create:hover {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.list-main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.search-bar {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.search-bar .search-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+  pointer-events: none;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 0.7rem 1rem 0.7rem 2.6rem;
+  border: 1px solid #d1d9e0;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-sizing: border-box;
+}
+
+.search-bar input:focus {
+  outline: none;
+  border-color: #1a6b4f;
+  box-shadow: 0 0 0 3px rgba(26, 107, 79, 0.12);
+}
+
+.service-list .loading,
+.service-list .error,
+.service-list .empty {
+  text-align: center;
+  padding: 2rem;
+  color: #666;
+}
+
+.service-list .error {
+  color: #c00;
+}
+
+.service-list .empty a {
+  color: #1a6b4f;
+}
+
+.service-cards {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.service-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1.25rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e8ecef;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.card-body h2 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.2rem;
+  color: #0f4c3a;
+}
+
+.card-body p {
+  margin: 0 0 0.5rem 0;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.card-body .meta {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.card-actions .btn-edit {
+  background: #1a6b4f;
+  color: #fff;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.card-actions .btn-edit:hover {
+  background: #0f4c3a;
+}
+
+.card-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.card-actions .btn-delete {
+  background: #dc3545;
+  color: #fff;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.card-actions .btn-delete:hover {
+  background: #c82333;
+}
