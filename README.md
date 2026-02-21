@@ -393,22 +393,7 @@ Submitted → Under Review → Pending Documents → Forwarded to Officer → Ap
 
 ---
 
-## 📸 Screenshots
-
-> _Add screenshots of the application pages here._
-
-| Page                | Description                     |
-|---------------------|---------------------------------|
-| Entry Page          | Landing page with hero section  |
-| Service Listing     | Browse available services       |
-| Apply for Service   | Dynamic form for application    |
-| User Profile        | Application history & tracking  |
-| Admin Dashboard     | Admin overview panel            |
-| Staff Dashboard     | Staff application management    |
-
----
-
 ## 👨‍💻 Author
 
-**Vikas** — Unified Mentor Internship
+**Vikas Makwana** — Unified Mentor Internship
 
