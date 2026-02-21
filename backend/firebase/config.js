@@ -6,11 +6,11 @@ dotenv.config();
 
 let serviceAccount;
 
-if (process.env.FIREBASE_SERVICE_ACCOUNT) {
+if (process.env.GOOGLE_APPLICATION_CREDENTIALS) {
   try {
-    serviceAccount = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT);
+    serviceAccount = JSON.parse(process.env.GOOGLE_APPLICATION_CREDENTIALS);
   } catch (error) {
-    console.error("Error parsing FIREBASE_SERVICE_ACCOUNT env variable:", error);
+    console.error("Error parsing GOOGLE_APPLICATION_CREDENTIALS env variable:", error);
     process.exit(1);
   }
 } else {
@@ -19,7 +19,7 @@ if (process.env.FIREBASE_SERVICE_ACCOUNT) {
       readFileSync("./e-gram-panchayat-bd8a6-firebase-adminsdk-fbsvc-e629356f06.json", "utf8")
     );
   } catch (error) {
-    console.error("Error reading serviceAccountKey.json file:", error);
+    console.error("Error reading e-gram-panchayat-bd8a6-firebase-adminsdk-fbsvc-e629356f06.json file:", error);
     process.exit(1);
   }
 }
