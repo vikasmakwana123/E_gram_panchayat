@@ -1,43 +1,33 @@
+import admin from "firebase-admin";
+import dotenv from "dotenv";
+import { readFileSync } from "fs";
 
-import admin from 'firebase-admin';
-import path from 'path';
-import { fileURLToPath } from 'url';
+dotenv.config();
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+let serviceAccount;
 
-let db = null;
-
-try {
-  if (admin.apps.length === 0) {
-
-    if (process.env.FIREBASE_SERVICE_ACCOUNT_JSON) {
-      const serviceAccount = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT_JSON);
-      admin.initializeApp({ credential: admin.credential.cert(serviceAccount) });
-    } else {
-
-      let credPath = (process.env.GOOGLE_APPLICATION_CREDENTIALS || '').trim();
-
-      if (credPath && !path.isAbsolute(credPath)) {
-
-        const projectRoot = path.join(__dirname, '..');
-        credPath = path.resolve(projectRoot, credPath);
-      }
-      if (credPath) {
-        process.env.GOOGLE_APPLICATION_CREDENTIALS = credPath;
-        console.log('[Firebase] Loading credentials from:', credPath);
-      }
-
-      admin.initializeApp({
-        credential: admin.credential.applicationDefault()
-      });
-    }
+if (process.env.FIREBASE_SERVICE_ACCOUNT) {
+  try {
+    serviceAccount = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT);
+  } catch (error) {
+    console.error("Error parsing FIREBASE_SERVICE_ACCOUNT env variable:", error);
+    process.exit(1);
   }
-
-  db = admin.firestore();
-} catch (err) {
-  console.warn('[Firebase] Not configured:', err.message);
-  console.warn('Add GOOGLE_APPLICATION_CREDENTIALS in .env with the path to your .json file.');
+} else {
+  try {
+    serviceAccount = JSON.parse(
+      readFileSync("./e-gram-panchayat-bd8a6-firebase-adminsdk-fbsvc-e629356f06.json", "utf8")
+    );
+  } catch (error) {
+    console.error("Error reading serviceAccountKey.json file:", error);
+    process.exit(1);
+  }
 }
 
-export { admin, db };
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount),
+  storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
+});
+
+export const auth = admin.auth();
+export const db = admin.firestore();
